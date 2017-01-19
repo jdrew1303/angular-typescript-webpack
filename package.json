@@ -8,7 +8,7 @@
     "test": "karma start --NODE_ENV=test",
     "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production"
   },
-  "author": "Brecht Billiet <billietbrecht@gmail.com>",
+  "author": "James Drew <j.drew1303@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "@types/angular": "~1.5.19",
