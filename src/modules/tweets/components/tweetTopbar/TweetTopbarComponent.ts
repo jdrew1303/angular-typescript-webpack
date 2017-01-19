@@ -1,5 +1,5 @@
-import {TopbarModel} from "../../../core/models/impl/TopbarModel";
-import {SharedModel} from "../../../core/models/impl/SharedModel";
+import {TopbarModel} from "../../core/models/impl/TopbarModel";
+import {SharedModel} from "../../core/models/impl/SharedModel";
 export class TweetTopbarComponent implements ng.IComponentOptions {
     public controller: any = TweetTopbarController;
     public template: string = `

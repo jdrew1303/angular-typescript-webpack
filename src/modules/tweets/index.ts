@@ -6,11 +6,11 @@ import {TweetContentComponent} from "./components/tweetContent/TweetContentCompo
 import {TweetMainComponent} from "./components/tweetMain/TweetMainComponent";
 import {TweetSidebarComponent} from "./components/tweetSidebar/TweetSidebarComponent";
 import {TweetTopbarComponent} from "./components/tweetTopbar/TweetTopbarComponent";
-import {ContentModel} from "../core/models/impl/ContentModel";
-import {SharedModel} from "../core/models/impl/SharedModel";
-import {SidebarModel} from "../core/models/impl/SidebarModel";
-import {TopbarModel} from "../core/models/impl/TopbarModel";
-import {TweetService} from "../core/services/impl/TweetService";
+import {ContentModel} from "./core/models/impl/ContentModel";
+import {SharedModel} from "./core/models/impl/SharedModel";
+import {SidebarModel} from "./core/models/impl/SidebarModel";
+import {TopbarModel} from "./core/models/impl/TopbarModel";
+import {TweetService} from "./core/services/impl/TweetService";
 
 angular.module("app.tweets", ["ngRoute"])
     .service("ContentModel", ContentModel)
