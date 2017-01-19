@@ -1,4 +1,4 @@
-import {Tweet} from "../../entities/Tweet";
+import {Tweet} from "./Tweet";
 export class TweetService {
     public getAll(): Array<Tweet> {
         var returnObj: Array<Tweet> = new Array<Tweet>();

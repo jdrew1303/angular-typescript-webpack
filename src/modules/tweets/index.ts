@@ -1,16 +1,16 @@
 import * as angular from "angular";
 import "angular-route";
-import {config as routesConfig} from "./configs/routes";
-import {PageTweetsComponent} from "./components/pageTweets/PageTweetsComponent";
-import {TweetContentComponent} from "./components/tweetContent/TweetContentComponent";
-import {TweetMainComponent} from "./components/tweetMain/TweetMainComponent";
-import {TweetSidebarComponent} from "./components/tweetSidebar/TweetSidebarComponent";
-import {TweetTopbarComponent} from "./components/tweetTopbar/TweetTopbarComponent";
-import {ContentModel} from "./core/models/impl/ContentModel";
-import {SharedModel} from "./core/models/impl/SharedModel";
-import {SidebarModel} from "./core/models/impl/SidebarModel";
-import {TopbarModel} from "./core/models/impl/TopbarModel";
-import {TweetService} from "./core/services/impl/TweetService";
+import {config as routesConfig} from "./routes";
+import {PageTweetsComponent} from "./PageTweetsComponent";
+import {TweetContentComponent} from "./TweetContentComponent";
+import {TweetMainComponent} from "./TweetMainComponent";
+import {TweetSidebarComponent} from "./TweetSidebarComponent";
+import {TweetTopbarComponent} from "./TweetTopbarComponent";
+import {ContentModel} from "./ContentModel";
+import {SharedModel} from "./SharedModel";
+import {SidebarModel} from "./SidebarModel";
+import {TopbarModel} from "./TopbarModel";
+import {TweetService} from "./TweetService";
 
 angular.module("app.tweets", ["ngRoute"])
     .service("ContentModel", ContentModel)

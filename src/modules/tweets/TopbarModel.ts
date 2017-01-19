@@ -1,4 +1,4 @@
-import {Tweet} from "../../entities/Tweet";
+import {Tweet} from "./Tweet";
 import {SharedModel} from "./SharedModel";
 export class TopbarModel {
     public static $inject: Array<string> = ["SharedModel"];

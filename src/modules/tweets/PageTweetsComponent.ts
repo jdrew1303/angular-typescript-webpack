@@ -1,4 +1,4 @@
-import {SharedModel} from "../../core/models/impl/SharedModel";
+import {SharedModel} from "./SharedModel";
 export class PageTweetsComponent implements ng.IComponentOptions {
     public controller: any = PageTweetsController;
     public template: string = `

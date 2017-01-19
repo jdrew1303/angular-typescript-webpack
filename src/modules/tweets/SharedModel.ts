@@ -1,5 +1,5 @@
-import {Tweet} from "../../entities/Tweet";
-import {TweetService} from "../../services/impl/TweetService";
+import {Tweet} from "./Tweet";
+import {TweetService} from "./TweetService";
 export class SharedModel {
     public static $inject: Array<string> = ["TweetService"];
     public tweets: Array<Tweet>;

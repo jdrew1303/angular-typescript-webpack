@@ -1,5 +1,5 @@
-import {SidebarModel} from "../../core/models/impl/SidebarModel";
-import {SharedModel} from "../../core/models/impl/SharedModel";
+import {SidebarModel} from "./SidebarModel";
+import {SharedModel} from "./SharedModel";
 export class TweetSidebarComponent implements ng.IComponentOptions {
     public template: string = `
         <div ng-class="{'sidebar-collapsed': $ctrl.sharedModel.sidebarCollapsed}">

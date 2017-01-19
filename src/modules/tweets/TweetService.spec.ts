@@ -1,5 +1,5 @@
-import {TweetService} from "../impl/TweetService";
-import {Tweet} from "../../entities/Tweet";
+import {TweetService} from "./TweetService";
+import {Tweet} from "./Tweet";
 import * as _ from "lodash";
 describe("Service: TweetService", () => {
     var tweetService: TweetService;

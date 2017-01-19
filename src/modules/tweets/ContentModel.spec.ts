@@ -1,5 +1,5 @@
-import {ContentModel} from "../impl/ContentModel";
-import {SharedModel} from "../impl/SharedModel";
+import {ContentModel} from "./ContentModel";
+import {SharedModel} from "./SharedModel";
 describe("model: ContentModel", () => {
     describe("on initialization", () => {
         it("should expose the tweets passed from the sharedModel", () => {
