@@ -1,5 +1,5 @@
-import {SidebarModel} from "./SidebarModel";
-import {SharedModel} from "./SharedModel";
+import {SidebarModel} from './sidebar.model';
+import {SharedModel} from './shared.model';
 export class TweetSidebarComponent implements ng.IComponentOptions {
     public template: string = `
         <div ng-class="{'sidebar-collapsed': $ctrl.sharedModel.sidebarCollapsed}">
@@ -20,7 +20,7 @@ export class TweetSidebarComponent implements ng.IComponentOptions {
     public controller: any = TweetSidebarController;
 }
 export class TweetSidebarController {
-    public static $inject: Array<string> = ["SidebarModel", "SharedModel"];
+    public static $inject: Array<string> = ['SidebarModel', 'SharedModel'];
 
     constructor(public model: SidebarModel, public sharedModel: SharedModel) {
     }

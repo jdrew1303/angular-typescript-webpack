@@ -1,8 +1,8 @@
-import {Tweet} from "./Tweet";
-import {SharedModel} from "./SharedModel";
+import {Tweet} from './tweet';
+import {SharedModel} from './shared.model';
 
 export class ContentModel {
-    public static $inject: Array<string> = ["SharedModel"];
+    public static $inject: Array<string> = ['SharedModel'];
     public tweets: Array<Tweet>;
 
     constructor(sharedModel: SharedModel) {

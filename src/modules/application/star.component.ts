@@ -1,6 +1,6 @@
 export class StarComponent implements ng.IComponentOptions {
     public bindings: any = {
-        starred: "="
+        starred: '='
     };
     public controller: any = StarController;
     public template: string =

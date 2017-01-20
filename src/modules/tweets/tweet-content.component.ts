@@ -1,4 +1,4 @@
-import {ContentModel} from "./ContentModel";
+import {ContentModel} from './content.model';
 export class TweetContentComponent implements ng.IComponentOptions {
     public controller: any = TweetContentController;
     public template: string = `
@@ -24,7 +24,7 @@ export class TweetContentComponent implements ng.IComponentOptions {
     `;
 }
 export class TweetContentController {
-    public static $inject: Array<string> = ["ContentModel"];
+    public static $inject: Array<string> = ['ContentModel'];
     constructor(public model: ContentModel) {
     }
 }

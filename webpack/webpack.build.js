@@ -6,7 +6,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: ['./src/index.ts'],
     output: {
-        filename: 'build.js',
+        filename: '[name].bundle.js',
         path: 'dist'
     },
     devtool: 'source-map',

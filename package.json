@@ -4,9 +4,20 @@
   "description": "A seed project for a largescale angular architecture in webpack and typescript",
   "main": "/",
   "scripts": {
-    "start": "webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
+    "clean": "rimraf node_modules reports dist && yarn cache clean",
+    "clean-install": "yarn run clean && yarn install",
+    "clean-start": "npm run clean-install && yarn start",
+    "server": "webpack-dashboard -- webpack --config webpack/webpack.dev.js --watch --NODE_ENV=dev",
+    "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production",
     "test": "karma start --NODE_ENV=test",
-    "build": "webpack --config webpack/webpack.build.js --NODE_ENV=production"
+    "test-watch": "karma start --no-single-run --auto-watch --NODE_ENV=test",
+    "lint": "tslint --force \"src/**/*.ts\"",
+    "e2e": "protractor --NODE_ENV=test",
+    "e2e-live": "protractor --elementExplorer --NODE_ENV=test",
+    "start": "yarn run server",
+    "webdriver-update": "webdriver-manager update",
+    "webdriver-start": "webdriver-manager start",
+    "postinstall": "yarn run webdriver-update"
   },
   "author": "James Drew <j.drew1303@gmail.com>",
   "license": "MIT",
@@ -20,7 +31,7 @@
     "@types/lodash": "~4.14.38",
     "@types/source-map": "~0.1.29",
     "@types/uglify-js": "~2.6.28",
-    "angular": "~1.5.8",
+    "angular": "1.6.1",
     "angular-route": "~1.5.8",
     "bootstrap": "~3.3.7",
     "font-awesome": "~4.7.0",
@@ -52,15 +63,15 @@
     "karma-webpack": "~1.8.0",
     "node-sass": "~3.11.1",
     "phantomjs-polyfill": "0.0.2",
-    "phantomjs-prebuilt": "~2.1.13",
+    "phantomjs-prebuilt": "^2.1.14",
     "raw-loader": "0.5.1",
+    "rimraf": "^2.5.4",
     "sass-loader": "~4.0.2",
     "style-loader": "0.13.1",
     "ts-loader": "~1.0.0",
     "typescript": "~2.0.6",
-    "typings": "~1.5.0",
     "url-loader": "0.5.7",
-    "wallaby-webpack": "0.0.26",
-    "webpack": "~1.13.3"
+    "webpack": "~1.13.3",
+    "webpack-dashboard": "^0.2.1"
   }
 }

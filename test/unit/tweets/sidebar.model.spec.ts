@@ -1,22 +1,22 @@
-import {SidebarModel} from "./SidebarModel";
-import {SharedModel} from "./SharedModel";
-describe("Model: SidebarModel", () => {
+import {SidebarModel} from './../../../src/modules/tweets/sidebar.model';
+import {SharedModel} from './../../../src/modules/tweets/shared.model';
+describe('Model: SidebarModel', () => {
     var sharedModelMock: SharedModel;
     var sidebarModel: SidebarModel;
     beforeEach(() => {
-        sharedModelMock = jasmine.createSpyObj("sharedModel", ["toggleTopbar", "toggleSidebar"]);
+        sharedModelMock = jasmine.createSpyObj('sharedModel', ['toggleTopbar', 'toggleSidebar']);
         sharedModelMock.tweets = [];
         sharedModelMock.sidebarCollapsed = false;
         sharedModelMock.topbarCollapsed = false;
         sidebarModel = new SidebarModel(sharedModelMock);
     });
-    describe("on initialization", () => {
-        it("should expose the tweets from the sharedModel passed in the constructor", () => {
+    describe('on initialization', () => {
+        it('should expose the tweets from the sharedModel passed in the constructor', () => {
             expect(sidebarModel.tweets).toBe(sharedModelMock.tweets);
         });
     });
-    describe("on toggleCollapsed()", () => {
-        it("should collapse the sidebar", () => {
+    describe('on toggleCollapsed()', () => {
+        it('should collapse the sidebar', () => {
             sidebarModel.toggleCollapsed();
             expect(sharedModelMock.toggleSidebar).toHaveBeenCalled();
         });

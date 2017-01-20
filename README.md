@@ -33,6 +33,20 @@ npm install
 npm run build
 ```
 
+## Examples
+### Angular 1
+
+### Angular 2/4
+
+
+
+
+
+
+
+
+
+
 
 ### Features
 

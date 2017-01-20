@@ -2,7 +2,8 @@ export class PageAboutComponent implements ng.IComponentOptions {
     public template: string = `
     <div class="container-fluid">
         <h1><i class="fa fa-info-circle"></i>&nbsp;About</h1>
-        This architecture is written By <a href="http://brecht.io">Brecht Billiet</a> to help you set up a largescale project with:
+        This is written to help you understand how the application is 
+        structured and how to work with Angular 1 and Angular 2 dual boot.
         <ul>
             <li>Typescript</li>
             <li>Webpack</li>

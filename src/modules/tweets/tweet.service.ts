@@ -1,9 +1,9 @@
-import {Tweet} from "./Tweet";
+import {Tweet} from './tweet';
 export class TweetService {
     public getAll(): Array<Tweet> {
         var returnObj: Array<Tweet> = new Array<Tweet>();
         for (var i: number = 0; i < 5; i++) {
-            returnObj.push(new Tweet("@user", "Content", false));
+            returnObj.push(new Tweet('@user', 'Content', false));
         }
         return returnObj;
     }

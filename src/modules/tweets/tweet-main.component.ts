@@ -1,4 +1,4 @@
-import {SharedModel} from "./SharedModel";
+import {SharedModel} from './shared.model';
 export class TweetMainComponent implements ng.IComponentOptions {
     public controller: any = TweetMainController;
     public template: string = `
@@ -7,7 +7,7 @@ export class TweetMainComponent implements ng.IComponentOptions {
     `;
 }
 export class TweetMainController {
-    public static $inject: Array<string> = ["SharedModel"];
+    public static $inject: Array<string> = ['SharedModel'];
     constructor(public sharedModel: SharedModel) {
     }
 }

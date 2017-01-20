@@ -1,30 +1,30 @@
-import {SharedModel} from "./SharedModel";
-import {Tweet} from "./Tweet";
+import {SharedModel} from './../../../src/modules/tweets/shared.model';
+import {Tweet} from './../../../src/modules/tweets/tweet';
 import Spy = jasmine.Spy;
-import {TweetService} from "./TweetService";
-describe("model: SharedModel", () => {
+import {TweetService} from './../../../src/modules/tweets/tweet.service';
+describe('model: SharedModel', () => {
     var tweetServiceMock: TweetService;
     var sharedModel: SharedModel;
-    var getAllResult: Array<Tweet> = [new Tweet("@test", "test", false)];
+    var getAllResult: Array<Tweet> = [new Tweet('@test', 'test', false)];
     beforeEach(() => {
-        tweetServiceMock = jasmine.createSpyObj("TweetService", ["getAll"]);
+        tweetServiceMock = jasmine.createSpyObj('TweetService', ['getAll']);
         (<Spy>tweetServiceMock.getAll).and.returnValue(getAllResult);
         sharedModel = new SharedModel(tweetServiceMock);
     });
-    describe("on initialization", () => {
-        it("should set the topbarCollapsed property to false by default", () => {
+    describe('on initialization', () => {
+        it('should set the topbarCollapsed property to false by default', () => {
             expect(sharedModel.topbarCollapsed).toBe(false);
         });
 
-        it("should set the sidebarCollapsed property to false by default", () => {
+        it('should set the sidebarCollapsed property to false by default', () => {
             expect(sharedModel.sidebarCollapsed).toBe(false);
         });
-        it("should get the tweets from the service", () => {
+        it('should get the tweets from the service', () => {
             expect(sharedModel.tweets).toBe(getAllResult);
         });
     });
-    describe("When toggleTopbar()", () => {
-        it("should collapse the topbar", () => {
+    describe('When toggleTopbar()', () => {
+        it('should collapse the topbar', () => {
             sharedModel.toggleTopbar();
             expect(sharedModel.topbarCollapsed).toBe(true);
             sharedModel.toggleTopbar();
@@ -32,8 +32,8 @@ describe("model: SharedModel", () => {
         });
     });
 
-    describe("When toggleSidebar()", () => {
-        it("should collapse the sidebar", () => {
+    describe('When toggleSidebar()', () => {
+        it('should collapse the sidebar', () => {
             sharedModel.toggleSidebar();
             expect(sharedModel.sidebarCollapsed).toBe(true);
             sharedModel.toggleSidebar();

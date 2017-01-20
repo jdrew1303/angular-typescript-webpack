@@ -1,7 +1,7 @@
-import {Tweet} from "./Tweet";
-import {TweetService} from "./TweetService";
+import {Tweet} from './Tweet';
+import {TweetService} from './tweet.service';
 export class SharedModel {
-    public static $inject: Array<string> = ["TweetService"];
+    public static $inject: Array<string> = ['TweetService'];
     public tweets: Array<Tweet>;
     public topbarCollapsed: Boolean = false;
     public sidebarCollapsed: Boolean = false;

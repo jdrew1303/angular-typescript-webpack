@@ -1,5 +1,5 @@
-import {TopbarModel} from "./TopbarModel";
-import {SharedModel} from "./SharedModel";
+import {TopbarModel} from './topbar.model';
+import {SharedModel} from './shared.model';
 export class TweetTopbarComponent implements ng.IComponentOptions {
     public controller: any = TweetTopbarController;
     public template: string = `
@@ -20,7 +20,7 @@ export class TweetTopbarComponent implements ng.IComponentOptions {
     `;
 }
 export class TweetTopbarController {
-    public static $inject: Array<string> = ["SharedModel", "TopbarModel"];
+    public static $inject: Array<string> = ['SharedModel', 'TopbarModel'];
 
     constructor(public sharedModel: SharedModel, public model: TopbarModel) {
     }
